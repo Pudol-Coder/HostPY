@@ -1,0 +1,22 @@
+name: HostPY
+version: 1.2.0
+main: com.github.promango.hostpy.HostPY
+api-version: '1.21'
+author: Promango
+description: Minecraft 서버와 Python 프로젝트 사이의 신호 통신 및 Python 실행 플러그인
+softdepend: [Skript]
+
+commands:
+  hostpy:
+    description: HostPY 메인 명령어
+    permission: hostpy.admin
+    permission-message: "§c[HostPY] 이 명령어를 사용할 권한이 없습니다."
+    usage: |
+      /hostpy start <파일명> - Python 스크립트 실행
+      /hostpy stop <파일명> - 실행 중인 스크립트 종료
+      /hostpy list - 실행 중인 스크립트 목록
+
+permissions:
+  hostpy.admin:
+    description: HostPY 관리 명령어 사용 권한
+    default: op
